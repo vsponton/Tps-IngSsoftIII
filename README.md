@@ -1,6 +1,6 @@
 # Ingeniería del Software 3 - Práctico
 
-Repositorio Git de Ingeniería de Software 3 - 2024
+Repositorio Git de Ingeniería de Software 3 - 2025
 
 # Agenda
 
@@ -13,8 +13,6 @@ Durante este curso, exploraremos una variedad de herramientas y conceptos esenci
 * **Azure y Azure DevOps**: Exploraremos los servicios de Microsoft Azure y Azure DevOps, enfocándonos en cómo desplegar y gestionar aplicaciones en la nube. Aprenderemos a utilizar herramientas de integración continua y entrega continua para automatizar procesos de desarrollo y despliegue.
 
 * **Introducción a Sistemas Distribuidos y Arquitectura de Microservicios**: Exploraremos cómo utilizar los servicios de Azure para implementar soluciones distribuidas y contenerizadas aprovechando sus capacidades para crear aplicaciones escalables y resilientes.
-
-* **Administración de Dependencias:** Revisaremos herramientas como NuGet y npm para la administración de dependencias en nuestros proyectos. Aprenderemos cómo gestionar bibliotecas y paquetes de manera eficiente, asegurando que nuestras aplicaciones estén siempre actualizadas y libres de conflictos.
 
 * **Pipelines de Build y Deploy**: Aprenderemos a configurar y gestionar pipelines de construcción y despliegue, los cuales son esenciales para mantener la calidad y la consistencia en el desarrollo de software. Veremos cómo automatizar estos procesos para mejorar la eficiencia y reducir errores humanos.
 
@@ -87,12 +85,12 @@ Asegúrense de cumplir con todos los requisitos y procedimientos establecidos pa
 
 
   * [Trabajo Práctico 1 - Git Básico](trabajos/01-git-basico.md)
-  * [Trabajo Práctico 2 - Introducción a Docker](trabajos/02-introduccion-docker.md)
-  * [Trabajo Práctico 3 - Introducción a Azure DevOps](trabajos/03-introduccion-azuredevops.md)
-  * [Trabajo Práctico 4 - Azure DevOps Build Pipelines](trabajos/04-ado-pipelines.md)
-  * [Trabajo Práctico 5 - Azure DevOps Release Pipelines](trabajos/05-ado-release-pipelines.md)
-  * [Trabajo Práctico 6 - Pruebas Unitarias](trabajos/06-unit-tests.md)
-  * [Trabajo Práctico 7 - Code Coverage, Análisis Estático de Código y Pruebas de Integración](trabajos/07-code-coverage_integration-tests.md)
-  * [Trabajo Práctico 8 - Implementación de Contenedores en Azure y Automatización con Azure CLI](trabajos/08-contenedores-azure-automatizacion-azcli.md)
-  * [Trabajo Práctico 9 - Implementación de Contenedores en Azure Parte 2](trabajos/09-contenedores-azure-automatizacion-Parte2.md)
+  * [Trabajo Práctico 2 - Introducción a Docker]
+  * [Trabajo Práctico 3 - Introducción a Azure DevOps]
+  * [Trabajo Práctico 4 - Azure DevOps Build Pipelines]
+  * [Trabajo Práctico 5 - Azure DevOps Release Pipelines]
+  * [Trabajo Práctico 6 - Pruebas Unitarias]
+  * [Trabajo Práctico 7 - Code Coverage, Análisis Estático de Código y Pruebas de Integración]
+  * [Trabajo Práctico 8 - Implementación de Contenedores en Azure y Automatización con Azure CLI]
+  * [Trabajo Práctico 9 - Implementación de Contenedores en Azure Parte 2]
 
