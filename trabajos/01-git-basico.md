@@ -92,7 +92,7 @@ git merge [rama]       # Fusiona rama indicada
 
 
 
-## Trabajo Práctico 1 - Git Básico
+## Guia Práctica 1 - Git Básico
 
 ### 1- Objetivos de Aprendizaje
  - Utilizar herramientas de control de configuración de software
@@ -102,7 +102,7 @@ git merge [rama]       # Fusiona rama indicada
 ### 2- Unidad temática que incluye este trabajo práctico
 Este trabajo práctico corresponde a la unidad Nº: 1
 
-### 3- Consignas a desarrollar en el trabajo práctico:
+### 3- Consignas a desarrollar:
   - Los ejercicios representan casos concretos y rutinarios en uso de este tipo de herramientas
   - En los puntos donde corresponda, proveer los comandos de git necesarios para llevar a cabo el punto.
   - Cuando se especifique alguna descripción, realizarlo de la manera más clara posible y con ejemplos cuando sea necesario.
@@ -286,3 +286,4 @@ Si no podés defenderlo, **no se aprueba**.
 - Mostrá un ejemplo de `git revert` sobre un commit innecesario.
 - Resolvé un conflicto entre ramas.
 - Usá `git stash` en una situación simulada y explicalo.
+
