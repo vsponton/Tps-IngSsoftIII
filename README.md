@@ -43,11 +43,18 @@ Asimismo, pueden utilizar cualquier otra herramienta de CI/CD y/o cualquier otra
 
 A continuación, se detallan las condiciones para la presentación de los trabajos prácticos:
 
-* **Formato de Entrega:** La entrega del trabajo se realizará directamente en un repositorio de Git generado por cada alumno. Asegúrense de que el repositorio esté correctamente configurado y accesible.
+* **Formato de Entrega:**  La entrega del trabajo se realizará en un repositorio de Git generado por cada alumno, que debe incluir:
+  - Todas las ramas, commits y tags solicitados
+  - Un archivo decisiones.md con las justificaciones técnicas
+  - El repositorio debe estar correctamente configurado y accesible
 
 * **Tiempo de Entrega:** Cada trabajo práctico deberá ser entregado dentro de las dos semanas posteriores a la fecha en que fue asignado. Si se entrega fuera de ese plazo pero dentro de los primeros siete días corridos de retraso, se aplicará un descuento de un punto sobre la nota obtenida. Si el retraso es de entre ocho y catorce días corridos, el descuento será de dos puntos. Los trabajos entregados con más de catorce días corridos de demora serán considerados no entregados y no se evaluarán.
 
-* **Criterios de Evaluación:** Se evaluará tanto la completitud del trabajo como la presentación del mismo. Asegúrense de que su trabajo esté completo y presentado de una manera clara y ordenada. 
+* **Criterios de Evaluación:** 
+
+  - Organización técnica del repositorio (30%): Estructura de ramas, calidad de commits, uso correcto de Git
+  - Claridad y justificación en decisiones.md (30%): Explicación de decisiones técnicas y flujo de trabajo
+  - Defensa oral obligatoria (40%): Comprensión, argumentación y capacidad de explicar el trabajo realizado. Es obligatoria para aprobar. El alumno deberá demostrar comprensión profunda y defender todas la decisiones tomadas. Si no puede defender su trabajono se aprueba, independientemente de la calidad del repositorio.
 
 * **Parciales:** No habrá parciales, el promedio final de notas de cada Trabajo Práctico se considerará como nota de Parcial.
 
@@ -55,15 +62,12 @@ A continuación, se detallan las condiciones para la presentación de los trabaj
 
 * Asistencia a un mínimo del 70% de las clases prácticas
 
-* Nota de Parcial mayor a 4
+* Promedio de Notas de Parcial mayor a 4
 
-* No se promociona, se debe presentar un TP Integrador
+* No se promociona, se debe presentar un TP Integrador al finalizar el semestre.
 
 # Trabajo Práctico Integrador: Requisitos y Validación
-
-El Trabajo Práctico Integrador es un componente esencial para la aprobación del examen final teórico de esta materia. Se presenta el día que se rinde el final de la materia.
-
-El Trabajo Práctico Integrador es un componente esencial para la aprobación del examen final teórico de esta materia. Se presenta el día que se rinde el final de la materia.
+El Trabajo Práctico Integrador es un componente esencial para la regularida de esta materia. Se presenta como condición para regularizar la materia.
 
 * **Requisitos del Proyecto Integrador**:
 
