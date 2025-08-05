@@ -354,7 +354,6 @@ Debés organizarte con Git para realizar estas tareas de forma **ordenada, traza
 Vas a tener que mostrar tu trabajo y responder preguntas como:
 - ¿Qué hace `git rebase`? ¿Lo usaste o no? ¿Por qué?
 - ¿Cómo revertís un commit ya push?
-- ¿Qué significa que Git es distribuido?
 - Mostrame tu log y explicame qué hiciste en cada parte.
 
 ---
@@ -381,4 +380,5 @@ Si no podés defenderlo, **no se aprueba**.
 - Mostrá un ejemplo de `git revert` sobre un commit innecesario.
 - Resolvé un conflicto entre ramas.
 - Usá `git stash` en una situación simulada y explicalo.
+
 
