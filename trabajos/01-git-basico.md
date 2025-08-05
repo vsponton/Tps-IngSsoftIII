@@ -29,175 +29,268 @@ No alcanza con copiar esta guía. **Si no podés defenderlo, no se aprueba.**
 
 ---
 
-# Introducción a Git
+# Guía Paso a Paso – Git Básico (Práctica sugerida)
+
+## 4- Desarrollo
+
+### Introducción a Git
 
 Git es un sistema de control de versiones distribuido ampliamente utilizado en el desarrollo de software y proyectos colaborativos. Fue creado por Linus Torvalds en 2005 y se basa en la eficiencia, flexibilidad y velocidad para rastrear cambios en archivos y coordinar el trabajo en equipo.
 
-Es una herramienta poderosa y esencial para el desarrollo de software. Su enfoque distribuido permite que cada usuario tenga una copia completa del repositorio, lo que facilita el trabajo independiente y la colaboración eficiente.
+Es una herramienta poderosa y esencial para el desarrollo de software y proyectos colaborativos. Su enfoque distribuido y su conjunto de comandos permiten a los equipos trabajar de manera eficiente, mantener un historial claro de cambios y colaborar de forma efectiva en el desarrollo de software.
 
-## Estados de Git
+Opera en un entorno distribuido, lo que significa que cada usuario tiene una copia completa del repositorio en su sistema local. Esto permite que cada miembro del equipo trabaje de manera independiente y, al mismo tiempo, fusionar y sincronizar sus cambios con otros miembros.
 
-- **Working Directory**: Archivos en el sistema de archivos.
-- **Staging Area**: Área de preparación para los commits.
-- **Repository**: Historial de commits local.
-- **Remote Repository (GitHub)**: Repositorio remoto con los mismos tres estados internos.
+### Estados de Git
 
-## Instalación de Git
+- Working Directory
+- Staging Area
+- Repository
+- Remote Repository (GitHub): Otro repo con sus tres estados internos
 
-- **Windows**: [Git for Windows](https://git-for-windows.github.io/)
-- **Mac OS**: Git ya viene instalado; verificar con `git version` en Terminal.
+### Instalación
 
-## Configuración de Editor
+- Windows: https://git-for-windows.github.io/  
+  Git Bash: `git version`
 
-### Windows: Notepad++
-- Crear alias en Git Bash: `alias npp='notepad++.exe -multiInst -nosession'`
-- Configurar como editor predeterminado:
-  ```bash
-  git config --global core.editor "notepad++.exe -multiInst -nosession"
-  ```
+- Mac OS:  
+  Terminal: `git version`
 
-### Mac: TextMate
-- Instalar desde [https://macromates.com/](https://macromates.com/)
-- Configurar como editor predeterminado:
+### Configuración de Editor
+
+#### Windows: Notepad++
+
+- Agregamos el path en las variables de entorno
+- Ponemos un alias, por ejemplo npp:  
+  Desde Git Bash: `npp ~/.bash_profile`  
+  En el archivo escribimos:  
+  `alias npp='notepad++.exe -multiInst -nosession'`  
+  Guardamos, reiniciamos git bash y ahora cuando escribamos `npp` se abrirá Notepad++
+
+- Configurar como editor predeterminado de git:  
+  `git config --global core.editor "notepad++.exe -multiInst -nosession"`
+
+#### Mac: TextMate https://macromates.com/
+
+- En las Preferencias de TextMate le damos Install  
+- Terminal: `mate` abre el editor  
+- Configurar como editor predeterminado:  
   ```bash
   git config --global core.editor "mate -w"
+  git config --global -e
   ```
 
-## Principales Conceptos de Git
+### Principales conceptos de Git
 
-- **Repositorio**: Almacén de archivos e historial.
-- **Commit**: Conjunto de cambios en un momento específico.
-- **Branch (Rama)**: Línea de desarrollo independiente.
-- **Merge (Fusión)**: Combina cambios entre ramas.
-- **Clone**: Copia completa de un repositorio remoto.
+- **Repositorio**: Almacén de archivos e historial
+- **Commit**: Conjunto de cambios
+- **Rama (Branch)**: Línea de desarrollo independiente
+- **Fusión (Merge)**: Combinación de ramas
+- **Clonación (Clone)**: Copia exacta de un repositorio remoto
 
-## Comandos Básicos de Git
+### Comandos básicos de Git
 
 ```bash
-git init               # Inicializa un repositorio local
-git clone [URL]        # Clona repositorio remoto
-git add [archivo]      # Prepara archivo para commit
-git commit -m "msg"    # Crea un nuevo commit
-git status             # Estado del repositorio
-git log                # Historial de commits
-git push               # Envía commits al remoto
-git pull               # Trae y fusiona cambios remotos
-git branch             # Lista ramas
-git merge [rama]       # Fusiona rama indicada
+git init               # Inicializa un repositorio
+git clone [URL]        # Clona remoto
+git add [archivo]      # Prepara archivo
+git commit -m "msg"    # Commit
+git status             # Estado
+git log                # Historial
+git push               # Envía al remoto
+git pull               # Trae cambios remotos
+git branch             # Muestra ramas
+git merge [rama]       # Fusiona rama
 ```
 
 ---
 
-# Guía Paso a Paso – Git Básico (Práctica sugerida)
+## Creación de Repos 1: Crearlo en GitHub, clonarlo localmente y subir cambios
 
+1. Crear una cuenta en https://github.com
+2. Crear un nuevo repositorio en dicha página con el Readme.md por defecto
 
+3. Clonar el repo remoto en un nuevo directorio local
+   ```bash
+   git clone URL
+   git status
+   ```
 
-## Guia Práctica 1 - Git Básico
+4. Editar archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
+   ```bash
+   git status
+   ```
 
-### 1- Objetivos de Aprendizaje
- - Utilizar herramientas de control de configuración de software
- - Familiarizarse con los comandos más utilizados
- - Configurar el repositorio principal de cada alumno para la materia
+5. Editar (crearlo si no existe) el archivo .gitignore
+   - Agregar *.bak
 
-### 2- Unidad temática que incluye este trabajo práctico
-Este trabajo práctico corresponde a la unidad Nº: 1
+6. Crear un commit y proveer un mensaje descriptivo.
+   ```bash
+   git add .
+   git commit –m "Texto"
+   git status
+   ```
 
-### 3- Consignas a desarrollar:
-  - Los ejercicios representan casos concretos y rutinarios en uso de este tipo de herramientas
-  - En los puntos donde corresponda, proveer los comandos de git necesarios para llevar a cabo el punto.
-  - Cuando se especifique alguna descripción, realizarlo de la manera más clara posible y con ejemplos cuando sea necesario.
+7. Hacer un push al repositorio remoto.
+   ```bash
+   git push origin main
+   ```
 
-### 4- Desarrollo:
+## Creación de Repos 2: Crearlo localmente y subirlo a GitHub
 
-#### 1- Instalar Git
-Los pasos y referencias asumen el uso del sistema operativo Windows, en caso otros SO seguir recomendaciones específicas.
+1. Crear un repo local en un nuevo directorio
+   ```bash
+   mkdir demo2tp01
+   cd demo2tp01
+   git init
+   ```
 
-  - Bajar e instalar el cliente git. Por ejemplo, https://git-for-windows.github.io/
-  - Bajar e instalar un cliente visual.
- Por ejemplo, TortoiseGit para Windows o SourceTree para Windows/MAC:
-    - https://tortoisegit.org/
-    - https://www.sourcetreeapp.com/
-    - Lista completa: https://git-scm.com/downloads/guis/
+2. Agregar archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
 
-#### 2- Crear un repositorio local y agregar archivos
-  - Crear un repositorio local en un nuevo directorio.
-  - Agregar un archivo Readme.md, agregar algunas líneas con texto a dicho archivo.
-  - Crear un commit y proveer un mensaje descriptivo.
+3. Crear archivo .gitignore
 
-#### 3- Configuración del Editor Predeterminado
- - Instalar Notepad ++ para Windows o TextMate para Mac OS, colocarle un alias y configurarlo como editor predeterminado
-   
-#### 4- Creación de Repos 01 -> Crearlo en GitHub, clonarlo localmente y subir cambios
-  - Crear una cuenta en https://github.com
-  - Crear un nuevo repositorio en dicha página con el Readme.md por defecto
-  - Clonar el repo remoto en un nuevo directorio local
-  - Editar archivo Readme.md agregando algunas lineas de texto
-  - Editar (o crear si no existe) el archivo .gitignore agregando los archivos *.bak
-  - Crear un commit y porveer un mensaje descriptivo
-  - Intentar un push al repo remoto
-  - En caso de ser necesario configurar las claves SSH requeridas y reintentar el push.
+4. Crear un commit y proveer un mensaje descriptivo.
+   ```bash
+   git add .
+   git commit -m "Texto"
+   ```
 
-#### 5- Creación de Repos 02-> Crearlo localmente y subirlo a GitHub
-  - Crear un repo local
-  - Agregar archivo Readme.md con algunas lineas de texto
-  - Crear repo remoto en GitHub
-  - Asociar repo local con remoto
-  - Crear archivo .gitignore
-  - Crear un commit y proveer un mensaje descriptivo
-  - Subir cambios.
+5. Crear repo en GitHub y asociar
+   ```bash
+   git remote add origin <URL>
+   git branch -M main
+   git push -u origin main
+   ```
 
-#### 6- Ramas
-  - Crear una nueva rama
-  - Cambiarse a esa rama
-  - Hacer un cambio en el archivo Readme.md y hacer commit
-  - Revisar la diferencia entre ramas
+## Ramas
 
-#### 7- Merges
-  - Hacer un merge FF
-  - Borrar la rama creada
-  - Ver el log de commits
-  - Repetir el ejercicio 6 para poder hacer un merge con No-FF
+Una rama en Git es una línea independiente de desarrollo que permite a los desarrolladores crear, editar y probar cambios sin afectar directamente la rama principal o "master". Cada rama representa una versión del repositorio con su propio conjunto de cambios.
 
-#### 8- Resolución de Conflictos
-  - Instalar alguna herramienta de comparación. Idealmente una 3-Way:
-    - P4Merge https://www.perforce.com/downloads/helix-visual-client-p4v:
-![alt text](p4merge.png)
-    - Se puede omitir registración. Instalar solo opción Merge and DiffTool.
- - ByondCompare trial version https://www.scootersoftware.com/download.php
-    - Configurar Tortoise/SourceTree para soportar esta herramienta.
-    - https://www.scootersoftware.com/support.php?zz=kb_vcs
-    - https://medium.com/@robinvanderknaap/using-p4merge-with-tortoisegit-87c1714eb5e2
-  - Crear una nueva rama conflictBranch
-  - Realizar una modificación en la linea 1 del Readme.md desde main y commitear
-  - En la conflictBranch modificar la misma línea del Readme.md y commitear
-  - Ver las diferencias con git difftool main conflictBranch
-  - Cambiarse a la rama main e intentar mergear con la rama conflictBranch
-  - Resolver el conflicto con git mergetool
-  - Agregar .orig al .gitignore
-  - Hacer commit y push
+- Ver ramas:
+  ```bash
+  git branch –a
+  ```
 
-#### 9- Familiarizarse con el concepto de Pull Request
+- Crear rama:
+  ```bash
+  git branch newFeature
+  ```
 
-  - Explicar que es un pull request.
-  - Crear un branch local y agregar cambios a dicho branch. 
-  - Subir el cambio a dicho branch y crear un pull request.
-  - Completar el proceso de revisión en github y mergear el PR al branch master.
+- Cambiarnos a la nueva rama
+  ```bash
+  git checkout newFeature
+  ```
 
-#### 10- Algunos ejercicios online
-  - Entrar a la página https://learngitbranching.js.org/
-  - Completar los ejercicios **Introduction Sequence**
-  - Opcional - Completar el resto de los ejercicios para ser un experto en Git!!!
+- Hacemos un cambio en un archivo, comiteamos y vemos la diferencia
+  ```bash
+  git add .
+  git commit –m "Cambio en el Branch"
+  git diff main newFeature
+  ```
 
-#### 11- Crear Repositorio de la materia
-  - Crear un repositorio para la materia en github. Por ejemplo **ing-software-3**
-  - Subir archivo(s) .md con los resultados e imágenes de este trabajo práctico. Puede ser en una subcarpeta **trabajo-practico-01**
+## Merges
 
-### Referencias
+### Fast-Forward Merge (FF)
 
-- https://try.github.io/
-- https://github.github.com/training-kit/downloads/es_ES/github-git-cheat-sheet.pdf
-- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+Este tipo de fusión ocurre cuando no ha habido cambios en la rama principal (master) desde que se creó la rama secundaria (feature). 
 
+En este caso, Git simplemente mueve el puntero de la rama principal hacia adelante para incluir los commits de la rama secundaria.
+
+- Hacemos el merge:
+  ```bash
+  git checkout main
+  git merge newFeature
+  ```
+
+- Pusheamos 
+  ```bash
+  git push origin main
+  ```
+
+- Borramos la rama y vemos el log
+  ```bash
+  git branch –d newFeature
+  git log --oneline
+  ```
+
+### No Fast-Forward Merge (No-FF)
+
+Este tipo de fusión ocurre cuando se han realizado commits tanto en la rama principal como en la rama secundaria desde que se bifurcaron. Git crea un nuevo commit de fusión que combina los cambios de ambas ramas.
+
+1. Creamos nueva rama
+2. Hacemos un cambio en archivo en rama main, hacemos commit
+3. Modificamos un archivo y hacemos commit
+4. Vemos la diferencia entre ramas
+5. Hacemos el merge:
+   ```bash
+   git checkout main
+   git merge newFeature2 --no-ff –m "merge con no ff"
+   ```
+
+6. Borramos la rama y vemos el log
+   ```bash
+   git branch –d newFeature2
+   git log –oneline –graph --decorate
+   ```
+
+### AutoMerge
+
+Git puede auto-fusionar cambios sin conflictos.
+
+## Resolución de Conflictos
+
+En casos en los que no hay conflictos entre los cambios en las ramas, Git realiza un "auto-merge". Esto significa que Git es capaz de combinar automáticamente los cambios sin intervención del usuario.
+
+Supongamos que dos usuarios trabajan en la misma rama "feature" y realizan cambios diferentes en archivos no conflictivos.
+
+Después de que ambos usuarios envían sus cambios y uno de ellos realiza un merge con `git merge feature`, Git realizará un auto-merge sin problemas.
+
+1. Creamos una nueva rama conflictBranch
+2. Realizamos una modificación en la linea 1 del Readme.md desde main y commiteamos
+3. En la conflictBranch modificamos la misma línea del Readme.md y commiteamos
+4. Vemos las diferencias con `git difftool main conflictBranch`
+5. Me cambio a main e intento un `git merge conflictBranch`
+6. Me indicará que no pudo hacer el automerge
+7. Veo como quedo el Readme.md 
+8. Veo que estoy en un estado MERGING dentro de main
+9. Resuelvo el conflicto con `git mergetool`
+10. Agrego .orig al .gitignore
+11. Hago commit
+12. Hago push
+
+## Pull Request
+
+En el contexto del desarrollo de software y los sistemas de control de versiones distribuidos, un Pull Request (PR) o solicitud de extracción es una funcionalidad clave que permite a los desarrolladores colaborar y revisar los cambios antes de fusionarlos en la rama principal del repositorio. Es una característica fundamental en plataformas como GitHub y GitLab.
+
+El Pull Request se utiliza principalmente cuando un desarrollador ha trabajado en una rama secundaria (por ejemplo, una rama de funcionalidad) y desea incorporar esos cambios en la rama principal del proyecto (generalmente llamada "master" o "main"). En lugar de realizar una fusión directa, el desarrollador crea un Pull Request para notificar a otros miembros del equipo sobre los cambios y solicitar su revisión antes de la fusión.
+
+1. Creo una rama local, creo un nuevo archivo y la subo al repo remoto:
+   ```bash
+   git branch pullReqBranch
+   git push origin pullReqBranch
+   ```
+
+2. Desde github hago un PullRequest
+
+3. Ver opciones de seguridad de la rama
+
+### Beneficios de PRs:
+
+Los PRs ofrecen una serie de beneficios que mejoran la calidad del código, la colaboración del equipo y la gestión del proyecto:
+
+1. **Facilita la revisión del código**: Proporcionan una forma estructurada para que los miembros del equipo revisen y discutan los cambios propuestos antes de que se fusionen en la rama principal. Esto ayuda a identificar errores, mejorar el diseño y asegurar que el código cumpla con los estándares de calidad del proyecto.
+
+2. **Fomenta la colaboración**: Al utilizar PRs, los miembros del equipo pueden compartir sus conocimientos y experiencia, ofrecer sugerencias y trabajar juntos para mejorar el código
+
+3. **Mejora la transparencia**: Proporcionan un registro claro y completo de los cambios propuestos, las discusiones y las revisiones realizadas por el equipo.
+
+4. **Permite pruebas y validaciones**: Antes de que los cambios se fusionen en la rama principal, los PRs pueden someterse a pruebas automatizadas, integración continua y validaciones por parte de otros miembros del equipo.
+
+5. **Evita conflictos y errores en la rama principal**: Al utilizar PRs, se minimiza el riesgo de conflictos y errores en la rama principal del repositorio. Los cambios se revisan cuidadosamente antes de la fusión, lo que reduce la probabilidad de introducir problemas en el código base.
+
+6. **Flexibilidad y control**: Los PRs ofrecen flexibilidad al desarrollador, ya que permiten continuar trabajando en la rama de funcionalidad sin necesidad de fusionarla de inmediato. El desarrollador puede recibir comentarios y realizar mejoras antes de completar la fusión.
+
+Es una práctica altamente beneficiosa en el desarrollo de software colaborativo, ya que mejora la calidad del código, fomenta la colaboración y brinda un mayor control sobre los cambios que se incorporan en el proyecto.
 
 ---
 
@@ -286,4 +379,3 @@ Si no podés defenderlo, **no se aprueba**.
 - Mostrá un ejemplo de `git revert` sobre un commit innecesario.
 - Resolvé un conflicto entre ramas.
 - Usá `git stash` en una situación simulada y explicalo.
-
