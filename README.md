@@ -28,7 +28,7 @@ A continuación, se detallan las condiciones para la presentación de los trabaj
 
 * **Formato de Entrega:** La entrega del trabajo se realizará directamente en un repositorio de Git generado por cada alumno. Asegúrense de que el repositorio esté correctamente configurado y accesible.
 
-* **Tiempo de Entrega:** Cada trabajo práctico debe ser entregado en un plazo de 2 semanas a partir de la fecha de asignación. Los trabajos presentados fuera de plazo se considerarán no entregados.
+* **Tiempo de Entrega:** Cada trabajo práctico deberá ser entregado dentro de las dos semanas posteriores a la fecha en que fue asignado. Si se entrega fuera de ese plazo pero dentro de los primeros siete días corridos de retraso, se aplicará un descuento de un punto sobre la nota obtenida. Si el retraso es de entre ocho y catorce días corridos, el descuento será de dos puntos. Los trabajos entregados con más de catorce días corridos de demora serán considerados no entregados y no se evaluarán.
 
 * **Criterios de Evaluación:** Se evaluará tanto la completitud del trabajo como la presentación del mismo. Asegúrense de que su trabajo esté completo y presentado de una manera clara y ordenada. 
 
