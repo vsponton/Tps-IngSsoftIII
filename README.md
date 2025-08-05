@@ -22,6 +22,23 @@ Estos temas nos proporcionarán una base sólida en las prácticas modernas de d
 
 **¡Esperamos que disfruten y aprovechen al máximo este semestre!**
 
+# Enfoque de la materia 
+La importancia de esta cátedra radica en adquirir conceptos fundamentales sobre integración y entrega continua (CI/CD), automatización y despliegue, así como en ejemplificar cómo llevarlos a la práctica. El objetivo no es dominar en profundidad una herramienta específica, sino comprender el enfoque, los beneficios y las mejores prácticas, para luego poder aplicarlos en distintas plataformas y contextos reales.
+
+Los detalles finos de configuración e implementación específicos de cada herramienta no forman parte del alcance central de la materia, y se espera que el estudiante pueda complementarlos con recursos externos, documentación oficial o soporte de las plataformas que elija.
+Además, el uso de herramientas de inteligencia artificial **está no solo permitido, sino que se alienta activamente**. La IA puede facilitar la redacción de scripts, la configuración de pipelines, la comprensión de errores y la optimización de tareas repetitivas, siempre y cuando el estudiante comprenda lo que está implementando y pueda justificar sus decisiones técnicas.
+
+Tanto en los trabajos prácticos como en el Trabajo Práctico Integrador de la materia, podrán utilizar cualquier herramienta de CI/CD y cualquier nube pública.
+Durante el cursado, abordaremos los conceptos clave implementándolos específicamente en Azure DevOps y la nube de Microsoft Azure, aunque su uso no es obligatorio.
+Para quienes deseen utilizar Azure, pueden crear una cuenta gratuita para estudiantes en el siguiente enlace:👉 https://azure.microsoft.com/es-es/free/students
+
+En caso de no poder acceder a la cuenta gratuita para estudiantes, también pueden crear una cuenta estándar. En ese caso, se solicitará una tarjeta de crédito únicamente con fines de validación. Todos los trabajos prácticos se realizarán exclusivamente con servicios gratuitos disponibles en la plataforma Azure, por lo que no tendrán costos asociados.
+
+⚠️ Importante: si optan por utilizar una cuenta estándar, será responsabilidad del alumno verificar que los servicios configurados estén dentro del plan gratuito para evitar cargos.
+
+Asimismo, pueden utilizar cualquier otra herramienta de CI/CD y/o cualquier otra nube pública, pero no se brindarán instrucciones ni soporte para plataformas que no sean Azure DevOps y Azure.
+
+
 # Condiciones para la Presentación de Trabajos Prácticos
 
 A continuación, se detallan las condiciones para la presentación de los trabajos prácticos:
