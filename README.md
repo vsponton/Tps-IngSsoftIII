@@ -48,26 +48,25 @@ A continuación, se detallan las condiciones para la presentación de los trabaj
   - Un archivo decisiones.md con las justificaciones técnicas
   - El repositorio debe estar correctamente configurado y accesible
 
-* **Tiempo de Entrega:** Cada trabajo práctico deberá ser entregado dentro de las dos semanas posteriores a la fecha en que fue asignado. Si se entrega fuera de ese plazo pero dentro de los primeros siete días corridos de retraso, se aplicará un descuento de un punto sobre la nota obtenida. Si el retraso es de entre ocho y catorce días corridos, el descuento será de dos puntos. Los trabajos entregados con más de catorce días corridos de demora serán considerados no entregados y no se evaluarán.
-
+* **Tiempo de Entrega:** Habra dos revisiones semestrales cada 4 semanas. Los trabajos del 1 al 4 deben ser presentados en la semana 5 y los del 5 al 8 en la semana 9. En la presentación deberán realizar una una defensa oral de sus entregas. Los trabajos presentados con posterioridad a la fecha de revision no serán evaluados.
+  
 * **Criterios de Evaluación:** 
 
   - Organización técnica del repositorio (30%): Estructura de ramas, calidad de commits, uso correcto de Git
   - Claridad y justificación en decisiones.md (30%): Explicación de decisiones técnicas y flujo de trabajo
   - Defensa oral obligatoria (40%): Comprensión, argumentación y capacidad de explicar el trabajo realizado. Es obligatoria para aprobar. El alumno deberá demostrar comprensión profunda y defender todas la decisiones tomadas. Si no puede defender su trabajono se aprueba, independientemente de la calidad del repositorio.
 
-* **Parciales:** No habrá parciales, el promedio final de notas de cada Trabajo Práctico se considerará como nota de Parcial.
+* **Parciales:** No habrá parciales prácticos, el promedio final de notas de cada Trabajo Práctico se considerará como nota de Parcial.
 
 # Condiciones para la regularidad
 
 * Asistencia a un mínimo del 70% de las clases prácticas
 
-* Promedio de Notas de Parcial mayor a 4
+* Promedio de Notas de Parcial mayor a 4 (60% del contenido)
 
-* No se promociona, se debe presentar un TP Integrador al finalizar el semestre.
+* No se promociona, se debe presentar un TP Integrador al momento de rendir el final.
 
 # Trabajo Práctico Integrador: Requisitos y Validación
-El Trabajo Práctico Integrador es un componente esencial para la regularida de esta materia. Se presenta como condición para regularizar la materia.
 
 * **Requisitos del Proyecto Integrador**:
 
@@ -113,5 +112,5 @@ Asegúrense de cumplir con todos los requisitos y procedimientos establecidos pa
   * [Trabajo Práctico 6 - Pruebas Unitarias]
   * [Trabajo Práctico 7 - Code Coverage, Análisis Estático de Código y Pruebas de Integración]
   * [Trabajo Práctico 8 - Implementación de Contenedores en Azure y Automatización con Azure CLI]
-  * [Trabajo Práctico 9 - Implementación de Contenedores en Azure Parte 2]
+
 
