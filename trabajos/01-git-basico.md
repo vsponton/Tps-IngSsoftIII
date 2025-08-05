@@ -330,7 +330,9 @@ Debés organizarte con Git para realizar estas tareas de forma **ordenada, traza
 - Aplicá el fix a `main` y también a tu rama de desarrollo.
 - **Elegí cómo lo integrás** (`merge`, `cherry-pick`, etc.) y **explicalo en `decisiones.md`**.
 
-### 4. Crear una versión etiquetada
+### 4. Hace un PR y aceptalo
+
+### 5. Crear una versión etiquetada
 - Marcá una versión estable con el tag `v1.0`.
 - Explicá en `decisiones.md` qué convenciones usaste y por qué.
 
@@ -379,3 +381,4 @@ Si no podés defenderlo, **no se aprueba**.
 - Mostrá un ejemplo de `git revert` sobre un commit innecesario.
 - Resolvé un conflicto entre ramas.
 - Usá `git stash` en una situación simulada y explicalo.
+
