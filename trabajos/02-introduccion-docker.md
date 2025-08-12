@@ -428,7 +428,7 @@ Vas a tener que mostrar tu trabajo y responder preguntas como:
 
 | Criterio                                    | Peso |
 |---------------------------------------------|------|
-| Organización técnica de los contenedores    | 30%  |
+| Organización técnica de los contenedores    | 20%  |
 | Claridad y justificación en `decisiones.md` | 30%  |
 | Defensa oral: comprensión y argumentación   | 50%  |
 
