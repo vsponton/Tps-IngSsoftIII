@@ -110,7 +110,7 @@ El marketplace de Azure DevOps ofrece cientos de extensiones para añadir funcio
 - Click en "+ New Project"
 - Configurar:
   - Project name: Sample01
-  - Visibility: Private
+  - Visibility: Public
   - Version control: Git
   - Work item process: Basic
 - Explicar las diferencias entre los tipos de procesos (Basic, Agile, Scrum, CMMI)
@@ -163,7 +163,6 @@ git checkout -b feature/mi-cambio
 - Configurar las iteraciones (Sprints)
 - Definir la duración del sprint (2 semanas)
 - Asignar work items a los sprints
-- Ver el burndown chart
 
 
 # Trabajo Práctico 03 – Introducción a Azure DevOps (2025)
