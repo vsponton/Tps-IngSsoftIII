@@ -110,7 +110,7 @@ El marketplace de Azure DevOps ofrece cientos de extensiones para añadir funcio
 - Click en "+ New Project"
 - Configurar:
   - Project name: Sample01
-  - Visibility: Public
+  - Visibility: private
   - Version control: Git
   - Work item process: Basic
 - Explicar las diferencias entre los tipos de procesos (Basic, Agile, Scrum, CMMI)
@@ -209,10 +209,8 @@ Tu equipo de desarrollo necesita migrar su proceso de trabajo a Azure DevOps. Co
 - Configurar políticas de branch para la rama principal:
   - Requerir Pull Request
   - Mínimo 1 reviewer
-  - Build validation
 - Crear al menos 2 branches de feature
 - Realizar cambios y crear Pull Requests
-- Documentar el flujo de branching elegido (GitFlow, GitHub Flow, etc.)
 
 ---
 
@@ -223,7 +221,6 @@ Tu equipo de desarrollo necesita migrar su proceso de trabajo a Azure DevOps. Co
    - Historial de builds exitosos
    - Work items organizados en sprints
    - Pull Requests completados
-   - Dashboard configurado
 
 2. **Repositorio en GitHub** con:
    - **README.md** con instrucciones para:
@@ -234,7 +231,6 @@ Tu equipo de desarrollo necesita migrar su proceso de trabajo a Azure DevOps. Co
    - **decisiones.md** explicando:
      - Metodología ágil elegida y justificación
      - Estructura de work items y por qué
-     - Estrategia de branching y justificación
      - **Evidencia de funcionamiento**: capturas mostrando:
        - Board con work items organizados
        - Pull Request aprobado y mergeado
