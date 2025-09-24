@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body class="bg-gray-50">
+  <nav class="bg-amber-800 text-white py-4 px-6 flex justify-between items-center">
+    <a href="index.html" class="font-bold text-xl">Ropa & Estilo</a>
+    <span>🛒 Carrito</span>
+  </nav>
+
+  <main class="max-w-4xl mx-auto py-12 px-4">
+    <h1 class="text-3xl font-bold mb-8 text-gray-800">Resumen de tu compra</h1>
+    <div id="cartList" class="space-y-4"></div>
+
+    <div class="mt-10 border-t pt-6 flex justify-between items-center">
+      <p class="text-xl text-gray-800 font-bold">Total: <span id="total" class="text-amber-700">$0</span></p>
+      <button id="clearCart" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-semibold py-2 px-4 rounded">Vaciar carrito</button>
+    </div>
+
+    <div class="mt-8">
+      <h2 class="text-xl font-bold mb-4 text-gray-800">Medios de Pago</h2>
+      <ul class="list-disc list-inside text-gray-700 space-y-1">
+        <li>Transferencia bancaria</li>
+        <li>Tarjeta de crédito o débito</li>
+        <li>Mercado Pago</li>
+      </ul>
+    </div>
+
+    <button class="mt-8 bg-amber-600 hover:bg-amber-700 text-black font-bold py-3 px-6 rounded transition">Finalizar Compra</button>
+  </main>
+
+  <footer class="bg-marron-claro-oscuro text-white py-8 text-center">
+    <p>© 2025 Ropa & Estilo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const CART_KEY = 'ropa_cart_v1';
+    function getCart(){ return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }
+    function setCart(items){ localStorage.setItem(CART_KEY, JSON.stringify(items)); }
+
+    function money(n){ return n.toLocaleString('es-AR', {style:'currency', currency:'ARS'}); }
+
+    function render(){
+      const cont = document.getElementById('cartList');
+      const totalEl = document.getElementById('total');
+      const cart = getCart();
+      cont.innerHTML = '';
+      let total = 0;
+      if(cart.length===0){
+        cont.innerHTML = '<p class="text-gray-600">Tu carrito está vacío.</p>';
+      } else {
+        cart.forEach((p, i)=>{
+          const sub = p.price * p.qty; total += sub;
+          const row = document.createElement('div');
+          row.className = 'flex justify-between items-center bg-white shadow px-4 py-3 rounded';
+          row.innerHTML = `
+            <div>
+              <p class="text-lg font-semibold text-gray-700">${p.name}${p.size?` - Talle ${p.size}`:''}</p>
+              <p class="text-sm text-gray-500">Precio: ${money(p.price)} • Cantidad: 
+                <button class="px-2 py-0.5 bg-gray-100 rounded font-bold minus" data-i="${i}">-</button>
+                <span class="mx-2">${p.qty}</span>
+                <button class="px-2 py-0.5 bg-gray-100 rounded font-bold plus" data-i="${i}">+</button>
+              </p>
+            </div>
+            <div class="flex items-center gap-3">
+              <p class="text-lg font-bold text-amber-700">${money(sub)}</p>
+              <button class="text-red-600 hover:underline remove" data-i="${i}">Eliminar</button>
+            </div>`;
+          cont.appendChild(row);
+        });
+      }
+      totalEl.textContent = money(total);
+
+      // eventos
+      cont.querySelectorAll('.remove').forEach(b=>{
+        b.addEventListener('click', e=>{
+          const i = Number(e.currentTarget.dataset.i);
+          const c = getCart(); c.splice(i,1); setCart(c); render();
+        });
+      });
+      cont.querySelectorAll('.plus').forEach(b=>{
+        b.addEventListener('click', e=>{
+          const i = Number(e.currentTarget.dataset.i);
+          const c = getCart(); c[i].qty++; setCart(c); render();
+        });
+      });
+      cont.querySelectorAll('.minus').forEach(b=>{
+        b.addEventListener('click', e=>{
+          const i = Number(e.currentTarget.dataset.i);
+          const c = getCart(); c[i].qty = Math.max(1, c[i].qty-1); setCart(c); render();
+        });
+      });
+    }
+
+    document.getElementById('clearCart').addEventListener('click', ()=>{
+      setCart([]); render();
+    });
+
+    render();
+  </script>
+</body>
+</html>
