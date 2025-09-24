@@ -1,0 +1,17 @@
+trigger:
+- main
+pr:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo "Validando sitio estático"; ls -la
+  displayName: Build
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)'
+    ArtifactName: 'site'
+    publishLocation: 'Container'
