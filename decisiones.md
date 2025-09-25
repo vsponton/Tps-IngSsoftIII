@@ -55,7 +55,7 @@ Al sincronizar con el repo original apareció *“refusing to merge unrelated hi
 ---
 
 ## 7. Solucionamos el error en la rama hotfix
-![Hotfix solución](./imagenes/07-hotfix-solucion.png)
+![Hotfix fix](./imagenes/07-hotfix-fix.png)
 
 ---
 
