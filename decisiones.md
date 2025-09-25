@@ -20,91 +20,53 @@ Al sincronizar con el repo original apareció *“refusing to merge unrelated hi
 > `powershell -NoProfile -Command "Remove-Item -LiteralPath './carpeta' -Recurse -Force"`
 
 ---
-
-### 1. Identidad + decisiones.md
-- `git config --global user.name "vsponton"`
-- `git config --global user.email "2146222@ucc.edu.ar"`
-- `echo "Configuración: user.name = vsponton, user.email = 2146222@ucc.edu.ar" > decisiones.md`
-- `git add decisiones.md`
-- `git commit -m "Agrego archivo decisiones.md con configuración inicial"`
-- `git push origin main`
+# Pasos Realizados
 
 ---
 
-### 2. Funcionalidad (2 commits atómicos)
-- `git checkout -b feature/nueva-funcionalidad`
-- `echo "Primeros cambios de la nueva funcionalidad" > funcionalidad.txt`
-- `git add funcionalidad.txt`
-- `git commit -m "Agrega archivo inicial de la nueva funcionalidad"`
-- `echo "Segunda parte de la funcionalidad" >> funcionalidad.txt`
-- `git add funcionalidad.txt`
-- `git commit -m "Completo segunda parte de la funcionalidad"`
-- `git push origin feature/nueva-funcionalidad`
+## 1. Forkeamos el repo
+![Fork](./imagenes/01-fork.png)
 
 ---
 
-### 3. — Hotfix (simulado)
-**Simular error en `main`:**
-- `git checkout main`
-- `echo "ERROR: línea simulada para hotfix" >> decisiones.md`
-- `git add decisiones.md`
-- `git commit -m "simula error en producción para hotfix"`
-- `git push origin main`
-
-**3.1 Corregir el error en rama hotfix y subir:**
-- `git checkout -b hotfix/error-simulacion`
-- `sed -i '/ERROR: línea simulada para hotfix/d' decisiones.md`
-- `git grep -n "ERROR: línea simulada para hotfix" || echo "línea eliminada"`
-- `git add decisiones.md`
-- `git commit -m "fix(hotfix): corrige error simulado en producción"`
-- `git push -u origin hotfix/error-simulacion`
-
-**3.2 Integrar fix en `main`:**
-- `git checkout main`
-- `git merge hotfix/error-simulacion`
-- `git push origin main`
-
-**3.3 Mantener sincronizada la feature:**
-- `git checkout feature/nueva-funcionalidad`
-- `git merge main`
-- `git push origin feature/nueva-funcionalidad`
+## 2. Clone al repo
+![Clone](./imagenes/02-clone.png)
 
 ---
 
-###  4. Pull Request y merge
-En GitHub (mi fork):
-- **base:** `main`  ←  **compare:** `feature/nueva-funcionalidad`
-- Título: *“Integración de nueva funcionalidad”*
-- Opción de integración: **Create a merge commit**
-- Crear PR y **Merge pull request** → **Confirm merge**.
-
-Actualizar local:
-- `git checkout main`
-- `git pull origin main`
+## 3. Realizamos la configuración inicial
+![Configuración inicial](./imagenes/03-configuracion.png)
 
 ---
 
-### 5. Tag de versión estable
-La versión estable es el commit de `main` que ya incluye **feature + hotfix** (`f13a5ee`).
-
-- (si existía un tag previo) `git tag -d v1.0`
-- (si existía en remoto) `git push origin :refs/tags/v1.0`
-- `git tag -a v1.0 -m "v1.0: versión estable con feature + hotfix" f13a5ee`
-- `git push origin v1.0`
-
-**Verificación:**
-- `git show --no-patch --oneline v1.0`  → debe mostrar `f13a5ee … nueva-funcionalidad`
+## 4. Creamos la rama secundaria y el primer commit atómico
+![Feature branch 1](./imagenes/04-feature-commit1.png)
 
 ---
 
-## Mini bitácora (hashes reales)
-- **feature**: `6fff6e7` (inicial), `46e1690` (segunda parte)  
-- **hotfix**: `d322f4c` (fix) → merge FF a `main`  
-- **merge main→feature**: `0b3c41d`  
-- **commit estable en main**: `f13a5ee`  
-- **tag**: `v1.0` → apunta a `f13a5ee`
+## 5. Segundo commit atómico
+![Feature branch 2](./imagenes/05-feature-commit2.png)
 
 ---
+
+## 6. Simulamos un error y creamos la rama hotfix para corregirlo
+![Hotfix creación](./imagenes/06-hotfix-creacion.png)
+
+---
+
+## 7. Solucionamos el error en la rama hotfix
+![Hotfix solución](./imagenes/07-hotfix-solucion.png)
+
+---
+
+## 8. Integramos la rama hotfix y la feature a main
+![Merge](./imagenes/08-merge.png)
+
+---
+
+## 9. Creación y push del tag
+![Tag](./imagenes/09-tag.png)
+
 
 ## Comandos de chequeo
 - `git log --oneline --graph --decorate -n 20`
