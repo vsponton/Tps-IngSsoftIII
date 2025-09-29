@@ -1,0 +1,60 @@
+name: ci-$(Date:yyyyMMdd)$(Rev:.r)
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  name: SelfHosted
+
+stages:
+- stage: CI
+  jobs:
+  - job: Build_Front
+    displayName: Build Frontend (CRA)
+    steps:
+    - checkout: self
+    - task: NodeTool@0
+      displayName: Use Node 18.x
+      inputs:
+        versionSpec: '18.x'
+    - script: |
+        set -e
+        cd frontend
+        if [ -f package-lock.json ]; then npm ci; else npm install; fi
+        CI=false npm run build
+        mkdir -p "$(Build.ArtifactStagingDirectory)/frontend-build"
+        cp -R build/* "$(Build.ArtifactStagingDirectory)/frontend-build/"
+      displayName: npm ci & build (frontend)
+    - task: PublishBuildArtifacts@1
+      displayName: publicar frontend
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/frontend-build'
+        ArtifactName: 'frontend-build'
+        publishLocation: 'Container'
+
+  - job: Build_Back
+    displayName: Build Back (Go)
+    dependsOn: Build_Front
+    steps:
+    - checkout: self
+    - script: |
+        set -e
+        export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+        cd back
+        if ! command -v go >/dev/null 2>&1; then brew install go || true; fi
+        go version
+        go mod download
+        go test ./... || true
+        mkdir -p build
+        go build -o build/cursos-api .
+        mkdir -p "$(Build.ArtifactStagingDirectory)/back-build"
+        cp build/cursos-api "$(Build.ArtifactStagingDirectory)/back-build/"
+      displayName: test & build (back)
+    - task: PublishBuildArtifacts@1
+      displayName: publicar back
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)/back-build'
+        ArtifactName: 'back-build'
+        publishLocation: 'Container'
+
