@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Productos - Ropa & Estilo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <link rel="stylesheet" href="estilo.css"/>
+</head>
+<body class="bg-white">
+  <nav class="bg-amber-800 text-white py-4 px-6 flex justify-between items-center">
+    <a href="index.html" class="font-bold text-xl">Ropa & Estilo</a>
+    <a href="sales.html" class="hover:text-amber-200" aria-label="Ir al carrito">🛒 Carrito</a>
+  </nav>
+
+  <main class="max-w-5xl mx-auto py-16 px-4 space-y-16">
+    <!-- REMERAS -->
+    <section id="remeras">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800">Remeras</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img src="https://images.unsplash.com/photo-1520975693416-35a1d5a5b0d9?q=80&w=1200&auto=format&fit=crop" alt="Remera oversize" class="w-full h-full object-cover rounded-lg shadow"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2 text-gray-800">Remera Oversize</h3>
+          <p class="text-gray-600 mb-3">Algodón pesado, calce relajado.</p>
+          <p class="text-2xl text-amber-700 font-bold mb-6" data-price="12990">$12.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded add-to-cart"
+            data-id="REM001" data-name="Remera Oversize" data-price="12990" data-size="M">Añadir al carrito</button>
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-12 items-center mt-12">
+        <div class="w-72 h-72">
+          <img src="https://images.unsplash.com/photo-1520975514805-46d3d0b08c6c?q=80&w=1200&auto=format&fit=crop" alt="Remera básica" class="w-full h-full object-cover rounded-lg shadow"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2 text-gray-800">Remera Básica</h3>
+          <p class="text-gray-600 mb-3">Algodón peinado, múltiples colores.</p>
+          <p class="text-2xl text-amber-700 font-bold mb-6" data-price="9990">$9.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded add-to-cart"
+            data-id="REM002" data-name="Remera Básica" data-price="9990" data-size="S">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- JEANS -->
+    <section id="jeans">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800 mt-6">Jeans</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img src="https://images.unsplash.com/photo-1458408990864-3c1a4d4e2e71?q=80&w=1200&auto=format&fit=crop" alt="Jean Straight" class="w-full h-full object-cover rounded-lg shadow"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2 text-gray-800">Jean Straight</h3>
+          <p class="text-gray-600 mb-3">Tiro medio, clásico.</p>
+          <p class="text-2xl text-amber-700 font-bold mb-6" data-price="34990">$34.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded add-to-cart"
+            data-id="JEA101" data-name="Jean Straight" data-price="34990" data-size="38">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMPERAS -->
+    <section id="camperas">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800 mt-6">Camperas</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img src="https://images.unsplash.com/photo-1518888570-9e5b3c0e0f12?q=80&w=1200&auto=format&fit=crop" alt="Campera Bomber" class="w-full h-full object-cover rounded-lg shadow"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2 text-gray-800">Campera Bomber</h3>
+          <p class="text-gray-600 mb-3">Liviana, ideal entretiempo.</p>
+          <p class="text-2xl text-amber-700 font-bold mb-6" data-price="49990">$49.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded add-to-cart"
+            data-id="CAM301" data-name="Campera Bomber" data-price="49990" data-size="L">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCESORIOS -->
+    <section id="accesorios">
+      <h2 class="text-3xl font-bold mb-8 text-gray-800 mt-6">Accesorios</h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="w-72 h-72">
+          <img src="https://images.unsplash.com/photo-1518544801976-3e160f7b53b1?q=80&w=1200&auto=format&fit=crop" alt="Gorra" class="w-full h-full object-cover rounded-lg shadow"/>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-2 text-gray-800">Gorra Clásica</h3>
+          <p class="text-gray-600 mb-3">Regulable, bordado frontal.</p>
+          <p class="text-2xl text-amber-700 font-bold mb-6" data-price="7990">$7.990</p>
+          <button class="bg-marron hover:bg-marron-transparente text-white font-bold py-3 px-6 rounded add-to-cart"
+            data-id="ACC501" data-name="Gorra Clásica" data-price="7990">Añadir al carrito</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite">Añadido al carrito</div>
+
+  <footer class="bg-marron-claro-oscuro text-white py-8 text-center">
+    <p>© 2025 Ropa & Estilo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // --- pequeño "cart" con localStorage ---
+    const CART_KEY = 'ropa_cart_v1';
+    const toast = document.getElementById('toast');
+
+    function getCart(){ return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); }
+    function setCart(items){ localStorage.setItem(CART_KEY, JSON.stringify(items)); }
+    function showToast(){
+      toast.classList.add('show');
+      setTimeout(()=> toast.classList.remove('show'), 2000);
+    }
+
+    document.querySelectorAll('.add-to-cart').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const item = {
+          id: btn.dataset.id,
+          name: btn.dataset.name,
+          price: Number(btn.dataset.price || 0),
+          size: btn.dataset.size || null,
+          qty: 1
+        };
+        const cart = getCart();
+        const idx = cart.findIndex(p=>p.id===item.id && p.size===item.size);
+        if(idx>=0){ cart[idx].qty += 1; } else { cart.push(item); }
+        setCart(cart);
+        showToast();
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap');
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Raleway', sans-serif; }
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.hero-image-ropa {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1920&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Links subrayado animado */
+.nav-link::after {
+  content:'';
+  display:block;
+  width:0; height:2px;
+  background:#797474eb;
+  transition:width .3s;
+}
+.nav-link:hover::after { width:100%; }
+
+/* Paleta marrón */
+.bg-marron-claro { background-color:#623f24; }
+.bg-marron-claro-oscuro { background-color:#5a381e; }
+.bg-marron { background-color:#5a381e; }
+.bg-marron-transparente { background-color:rgba(90,56,30,0.9); }
+.text-marron { color:#5a381e; }
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 20px; right: 20px;
+  background-color: #4a4a4a;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  opacity: 0; pointer-events: none;
+  transition: opacity .3s ease;
+  z-index: 1000;
+  user-select: none;
+  font-family: 'Raleway', sans-serif;
+}
+.toast.show { opacity: 1; pointer-events: auto; }

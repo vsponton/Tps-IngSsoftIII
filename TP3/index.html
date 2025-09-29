@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda de Ropa - Inicio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"/>
+  <link rel="stylesheet" href="estilo.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+  <!-- NAV -->
+  <nav id="navbar" class="bg-amber-800 bg-opacity-80 backdrop-blur text-white shadow-lg fixed top-0 w-full z-50 transition duration-300">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="text-2xl font-bold">Ropa & Estilo</a>
+      <div class="hidden md:flex space-x-8">
+        <a href="#inicio" class="nav-link hover:text-amber-200 transition">Inicio</a>
+        <a href="#categorias" class="nav-link hover:text-amber-200 transition">Categorías</a>
+        <a href="#destacados" class="nav-link hover:text-amber-200 transition">Destacados</a>
+        <a href="#contacto" class="nav-link hover:text-amber-200 transition">Contacto</a>
+      </div>
+      <a href="sales.html" class="text-white hover:text-amber-300" aria-label="Ir al carrito">🛒</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="inicio" class="hero-image-ropa h-screen flex items-center justify-center text-center text-white">
+    <div class="px-4">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Moda que se siente bien</h1>
+      <p class="text-xl md:text-2xl mb-8">Prendas versátiles, cómodas y con estilo</p>
+      <a href="#categorias" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full transition">Ver Colección</a>
+    </div>
+  </header>
+
+  <!-- CATEGORÍAS -->
+  <section id="categorias" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Categorías</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <a href="product.html#remeras" class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition product-card">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1200&auto=format&fit=crop" alt="Remeras" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Remeras</h3>
+            <p class="text-gray-600 text-sm">Básicas, oversize y estampadas.</p>
+          </div>
+        </a>
+        <a href="product.html#jeans" class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition product-card">
+          <img src="https://images.unsplash.com/photo-1516822003754-cca485356ecb?q=80&w=1200&auto=format&fit=crop" alt="Jeans" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Jeans</h3>
+            <p class="text-gray-600 text-sm">Mom, straight, wide leg.</p>
+          </div>
+        </a>
+        <a href="product.html#camperas" class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition product-card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="Camperas" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Camperas</h3>
+            <p class="text-gray-600 text-sm">Denim, bomber y abrigo.</p>
+          </div>
+        </a>
+        <a href="product.html#accesorios" class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition product-card">
+          <img src="https://images.unsplash.com/photo-1524275539700-cf51138f6795?q=80&w=1200&auto=format&fit=crop" alt="Accesorios" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="text-xl font-bold text-gray-800">Accesorios</h3>
+            <p class="text-gray-600 text-sm">Gorras, cinturones y más.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTACADOS -->
+  <section id="destacados" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Destacados</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="https://images.unsplash.com/photo-1551537482-f2075a1d41f2?q=80&w=1200&auto=format&fit=crop" alt="Remera básica" class="h-56 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">Remera básica unisex</h3>
+            <p class="text-gray-600 text-sm">Algodón 100% peinado.</p>
+            <p class="text-amber-700 font-bold mt-2">$9.990</p>
+            <a href="product.html#remeras" class="mt-3 inline-block bg-marron hover:bg-marron-transparente text-white font-bold py-2 px-4 rounded">Ver</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop" alt="Jean mom" class="h-56 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">Jean Mom Fit</h3>
+            <p class="text-gray-600 text-sm">Tiro alto, calce relajado.</p>
+            <p class="text-amber-700 font-bold mt-2">$34.990</p>
+            <a href="product.html#jeans" class="mt-3 inline-block bg-marron hover:bg-marron-transparente text-white font-bold py-2 px-4 rounded">Ver</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="https://images.unsplash.com/photo-1520975657288-8b456906c813?q=80&w=1200&auto=format&fit=crop" alt="Campera denim" class="h-56 w-full object-cover">
+          <div class="p-5">
+            <h3 class="text-xl font-bold text-gray-800">Campera Denim</h3>
+            <p class="text-gray-600 text-sm">Clásica, atemporal.</p>
+            <p class="text-amber-700 font-bold mt-2">$49.990</p>
+            <a href="product.html#camperas" class="mt-3 inline-block bg-marron hover:bg-marron-transparente text-white font-bold py-2 px-4 rounded">Ver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12 text-marron">Contacto</h2>
+      <form class="max-w-xl mx-auto space-y-4">
+        <label class="block">
+          <span class="sr-only">Nombre</span>
+          <input type="text" placeholder="Tu nombre" class="w-full px-4 py-2 rounded bg-white border border-amber-700 text-black">
+        </label>
+        <label class="block">
+          <span class="sr-only">Email</span>
+          <input type="email" placeholder="Tu email" class="w-full px-4 py-2 rounded bg-white border border-amber-700 text-black">
+        </label>
+        <label class="block">
+          <span class="sr-only">Mensaje</span>
+          <textarea rows="4" placeholder="Tu mensaje" class="w-full px-4 py-2 rounded bg-white border border-amber-700 text-black"></textarea>
+        </label>
+        <button type="submit" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded transition">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-marron-claro-oscuro text-white py-8 text-center">
+    <p>© 2025 Ropa & Estilo. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Navbar cambia de color al hacer scroll
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 100) {
+        navbar.classList.remove('bg-amber-800','bg-opacity-80');
+        navbar.classList.add('bg-marron-transparente');
+      } else {
+        navbar.classList.remove('bg-marron-transparente');
+        navbar.classList.add('bg-amber-800','bg-opacity-80');
+      }
+    });
+  </script>
+</body>
+</html>
